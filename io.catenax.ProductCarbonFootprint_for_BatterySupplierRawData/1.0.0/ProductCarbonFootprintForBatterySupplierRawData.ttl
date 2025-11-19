@@ -11,7 +11,119 @@
 @prefix samm-u: <urn:samm:org.eclipse.esmf.samm:unit:2.1.0#> .
 
 :ProductCarbonFootprintForBatterySupplierRawData a samm:Aspect ;
-   samm:properties ( ) ;
+   samm:properties ( :metaData ) ;
    samm:operations ( ) ;
    samm:events ( ) .
+
+:metaData a samm:Property ;
+   samm:characteristic :MetaDataCharacteristic .
+
+:MetaDataCharacteristic a samm:Characteristic ;
+   samm:dataType :MetaDataEntity .
+
+:MetaDataEntity a samm:Entity ;
+   samm:properties ( :productionLocationId :bmwGroupSupplierNumber :companyName :responsibleBmwGroupBuyer :PartName :PartNumber :ProcessName :description :dataSetLcaReportBackgroundInfo :typeOfProcess :geographicalRepresentativenessGer :defaultParameterValues :regionalizedElementaryFlows :partNumber :duplicatedElementaryFlows :allocation :elementContent :cffParameters :modellingConstants :lcaMethodologyReport :dataSourcesUsedForThisDataSet :referenceToSupportedImpactAssessmentMethods :compliance :lciaResults :dataQualityCriteriaAndRating ) .
+
+:productionLocationId a samm:Property ;
+   samm:preferredName "meta_production_location_id"@en ;
+   samm:characteristic :MetaStringCharacteristic .
+
+:bmwGroupSupplierNumber a samm:Property ;
+   samm:preferredName "meta_bmw_group_supplier_number"@en ;
+   samm:characteristic :MetaStringCharacteristic .
+
+:companyName a samm:Property ;
+   samm:preferredName "meta_company_name"@en ;
+   samm:characteristic :MetaStringCharacteristic .
+
+:responsibleBmwGroupBuyer a samm:Property ;
+   samm:preferredName "meta_responsible_bmw_group_buyer"@en ;
+   samm:characteristic :MetaStringCharacteristic .
+
+:PartName a samm:Property ;
+   samm:preferredName "meta_part_name"@en ;
+   samm:characteristic :MetaStringCharacteristic .
+
+:PartNumber a samm:Property ;
+   samm:preferredName "meta_part_number"@en ;
+   samm:characteristic :MetaStringCharacteristic .
+
+:ProcessName a samm:Property ;
+   samm:preferredName "meta_process_name"@en ;
+   samm:characteristic :MetaStringCharacteristic .
+
+:description a samm:Property ;
+   samm:preferredName "meta_description"@en ;
+   samm:characteristic :MetaStringCharacteristic .
+
+:dataSetLcaReportBackgroundInfo a samm:Property ;
+   samm:preferredName "meta_data_set_lca_report_background_info"@en ;
+   samm:characteristic :MetaStringCharacteristic .
+
+:typeOfProcess a samm:Property ;
+   samm:preferredName "meta_type_of_process"@en ;
+   samm:characteristic :MetaStringCharacteristic .
+
+:geographicalRepresentativenessGer a samm:Property ;
+   samm:preferredName "meta_geographical_representativeness_ger"@en ;
+   samm:characteristic :MetaStringCharacteristic .
+
+:defaultParameterValues a samm:Property ;
+   samm:preferredName "meta_default_parameter_values"@en ;
+   samm:characteristic :MetaStringCharacteristic .
+
+:regionalizedElementaryFlows a samm:Property ;
+   samm:preferredName "meta_regionalized_elementary_flows"@en ;
+   samm:characteristic :MetaStringCharacteristic .
+
+:partNumber a samm:Property ;
+   samm:preferredName "meta_part_number"@en ;
+   samm:characteristic :MetaStringCharacteristic .
+
+:duplicatedElementaryFlows a samm:Property ;
+   samm:preferredName "meta_duplicated_elementary_flows"@en ;
+   samm:characteristic :MetaStringCharacteristic .
+
+:allocation a samm:Property ;
+   samm:preferredName "meta_allocation"@en ;
+   samm:characteristic :MetaStringCharacteristic .
+
+:elementContent a samm:Property ;
+   samm:preferredName "meta_element_content"@en ;
+   samm:characteristic :MetaStringCharacteristic .
+
+:cffParameters a samm:Property ;
+   samm:preferredName "meta_cff_parameters"@en ;
+   samm:characteristic :MetaStringCharacteristic .
+
+:modellingConstants a samm:Property ;
+   samm:preferredName "meta_modelling_constants"@en ;
+   samm:characteristic :MetaStringCharacteristic .
+
+:lcaMethodologyReport a samm:Property ;
+   samm:preferredName "meta_lca_methodology_report"@en ;
+   samm:characteristic :MetaStringCharacteristic .
+
+:dataSourcesUsedForThisDataSet a samm:Property ;
+   samm:preferredName "meta_data_sources_used_for_this_data_set"@en ;
+   samm:characteristic :MetaStringCharacteristic .
+
+:referenceToSupportedImpactAssessmentMethods a samm:Property ;
+   samm:preferredName "meta_reference_to_supported_impact_assessment_methods"@en ;
+   samm:characteristic :MetaStringCharacteristic .
+
+:compliance a samm:Property ;
+   samm:preferredName "meta_compliance"@en ;
+   samm:characteristic :MetaStringCharacteristic .
+
+:lciaResults a samm:Property ;
+   samm:preferredName "meta_lcia_results"@en ;
+   samm:characteristic :MetaStringCharacteristic .
+
+:dataQualityCriteriaAndRating a samm:Property ;
+   samm:preferredName "meta_data_quality_criteria_and_rating"@en ;
+   samm:characteristic :MetaStringCharacteristic .
+
+:MetaStringCharacteristic a samm:Characteristic ;
+   samm:dataType xsd:string .
 
