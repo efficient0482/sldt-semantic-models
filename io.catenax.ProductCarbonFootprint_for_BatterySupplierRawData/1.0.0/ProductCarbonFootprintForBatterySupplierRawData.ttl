@@ -31,7 +31,7 @@
    samm:properties ( :productionLocationId :bmwGroupSupplierNumber :companyName :responsibleBmwGroupBuyer :PartName :PartNumber :ProcessName :description :dataSetLcaReportBackgroundInfo :typeOfProcess :geographicalRepresentativenessGer :defaultParameterValues :regionalizedElementaryFlows :partNumber :duplicatedElementaryFlows :allocation :elementContent :cffParameters :modellingConstants :lcaMethodologyReport :dataSourcesUsedForThisDataSet :referenceToSupportedImpactAssessmentMethods :compliance :lciaResults :dataQualityCriteriaAndRating :date :referenceYear ) .
 
 :DataEntity a samm:Entity ;
-   samm:properties ( ) .
+   samm:properties ( :process_name :system_components :type_of_flow :level1 :level2 :level3 :level4 :level5 :level6 :primaryInputOutputSourceEcoinventOnly :primaryInputOutput :primaryInputOutputDetailed :primaryInputOutputRegion :primaryUnit :secondaryInputOutputSource :secondaryInputOutput :secondaryInputOutputDetailed :secondaryInputOutputRegion :secondaryUnit :checkUnit :lifeCycleStage :datasetNameVirginPrimaryMaterial :datasetNameRecycledSecondaryMaterial :mostRelevantProcess :oneLevelDownAdjustedToCountry :carbonFootprintContribution :dataSource :collectionMethod :timespan :documentationForVerification :productionLocationId ) .
 
 :productionLocationId a samm:Property ;
    samm:preferredName "meta_production_location_id"@en ;
@@ -140,6 +140,126 @@
 :referenceYear a samm:Property ;
    samm:preferredName "meta_reference_year"@en ;
    samm:characteristic :TimeStampCharacteristic .
+
+:process_name a samm:Property ;
+   samm:preferredName "process_name"@en ;
+   samm:characteristic :MetaStringCharacteristic .
+
+:system_components a samm:Property ;
+   samm:preferredName "system_components"@en ;
+   samm:characteristic :MetaStringCharacteristic .
+
+:type_of_flow a samm:Property ;
+   samm:preferredName "type_of_flow"@en ;
+   samm:characteristic :MetaStringCharacteristic .
+
+:level1 a samm:Property ;
+   samm:preferredName "level_1"@en ;
+   samm:characteristic :MetaStringCharacteristic .
+
+:level2 a samm:Property ;
+   samm:preferredName "level_2"@en ;
+   samm:characteristic :MetaStringCharacteristic .
+
+:level3 a samm:Property ;
+   samm:preferredName "level_3"@en ;
+   samm:characteristic :MetaStringCharacteristic .
+
+:level4 a samm:Property ;
+   samm:preferredName "level_4"@en ;
+   samm:characteristic :MetaStringCharacteristic .
+
+:level5 a samm:Property ;
+   samm:preferredName "level_5"@en ;
+   samm:characteristic :MetaStringCharacteristic .
+
+:level6 a samm:Property ;
+   samm:preferredName "level_6"@en ;
+   samm:characteristic :MetaStringCharacteristic .
+
+:primaryInputOutputSourceEcoinventOnly a samm:Property ;
+   samm:preferredName "primary_input_output_source_ecoinvent_only"@en ;
+   samm:characteristic :MetaStringCharacteristic .
+
+:primaryInputOutput a samm:Property ;
+   samm:preferredName "primary_input_output"@en ;
+   samm:characteristic :MetaStringCharacteristic .
+
+:primaryInputOutputDetailed a samm:Property ;
+   samm:preferredName "primary_input_output_detailed"@en ;
+   samm:characteristic :MetaStringCharacteristic .
+
+:primaryInputOutputRegion a samm:Property ;
+   samm:preferredName "primary_input_output_region"@en ;
+   samm:characteristic :MetaStringCharacteristic .
+
+:primaryUnit a samm:Property ;
+   samm:preferredName "primary_unit"@en ;
+   samm:characteristic :MetaStringCharacteristic .
+
+:secondaryInputOutputSource a samm:Property ;
+   samm:preferredName "secondary_input_output_source"@en ;
+   samm:characteristic :MetaStringCharacteristic .
+
+:secondaryInputOutput a samm:Property ;
+   samm:preferredName "secondary_input_output"@en ;
+   samm:characteristic :MetaStringCharacteristic .
+
+:secondaryInputOutputDetailed a samm:Property ;
+   samm:preferredName "secondary_input_output_detailed"@en ;
+   samm:characteristic :MetaStringCharacteristic .
+
+:secondaryInputOutputRegion a samm:Property ;
+   samm:preferredName "secondary_input_output_region"@en ;
+   samm:characteristic :MetaStringCharacteristic .
+
+:secondaryUnit a samm:Property ;
+   samm:preferredName "secondary_unit"@en ;
+   samm:characteristic :MetaStringCharacteristic .
+
+:checkUnit a samm:Property ;
+   samm:preferredName "check_unit"@en ;
+   samm:characteristic :MetaStringCharacteristic .
+
+:lifeCycleStage a samm:Property ;
+   samm:preferredName "life_cycle_stage"@en ;
+   samm:characteristic :MetaStringCharacteristic .
+
+:datasetNameVirginPrimaryMaterial a samm:Property ;
+   samm:preferredName "dataset_name_virgin_primary_material"@en ;
+   samm:characteristic :MetaStringCharacteristic .
+
+:datasetNameRecycledSecondaryMaterial a samm:Property ;
+   samm:preferredName "dataset_name_recycled_secondary_material"@en ;
+   samm:characteristic :MetaStringCharacteristic .
+
+:mostRelevantProcess a samm:Property ;
+   samm:preferredName "most_relevant_process"@en ;
+   samm:characteristic :MetaStringCharacteristic .
+
+:oneLevelDownAdjustedToCountry a samm:Property ;
+   samm:preferredName "one_level_down_adjusted_to_country"@en ;
+   samm:characteristic :MetaStringCharacteristic .
+
+:carbonFootprintContribution a samm:Property ;
+   samm:preferredName "carbon_footprint_contribution"@en ;
+   samm:characteristic :MetaStringCharacteristic .
+
+:dataSource a samm:Property ;
+   samm:preferredName "data_source"@en ;
+   samm:characteristic :MetaStringCharacteristic .
+
+:collectionMethod a samm:Property ;
+   samm:preferredName "collection_method"@en ;
+   samm:characteristic :MetaStringCharacteristic .
+
+:timespan a samm:Property ;
+   samm:preferredName "timespan"@en ;
+   samm:characteristic :MetaStringCharacteristic .
+
+:documentationForVerification a samm:Property ;
+   samm:preferredName "documentation_for_verification"@en ;
+   samm:characteristic :MetaStringCharacteristic .
 
 :MetaStringCharacteristic a samm:Characteristic ;
    samm:dataType xsd:string .
