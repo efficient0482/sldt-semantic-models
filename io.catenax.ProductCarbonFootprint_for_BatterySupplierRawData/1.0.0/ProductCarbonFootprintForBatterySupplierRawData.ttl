@@ -22,7 +22,7 @@
    samm:dataType :MetaDataEntity .
 
 :MetaDataEntity a samm:Entity ;
-   samm:properties ( :productionLocationId :bmwGroupSupplierNumber :companyName :responsibleBmwGroupBuyer :PartName :PartNumber :ProcessName :description :dataSetLcaReportBackgroundInfo :typeOfProcess :geographicalRepresentativenessGer :defaultParameterValues :regionalizedElementaryFlows :partNumber :duplicatedElementaryFlows :allocation :elementContent :cffParameters :modellingConstants :lcaMethodologyReport :dataSourcesUsedForThisDataSet :referenceToSupportedImpactAssessmentMethods :compliance :lciaResults :dataQualityCriteriaAndRating ) .
+   samm:properties ( :productionLocationId :bmwGroupSupplierNumber :companyName :responsibleBmwGroupBuyer :PartName :PartNumber :ProcessName :description :dataSetLcaReportBackgroundInfo :typeOfProcess :geographicalRepresentativenessGer :defaultParameterValues :regionalizedElementaryFlows :partNumber :duplicatedElementaryFlows :allocation :elementContent :cffParameters :modellingConstants :lcaMethodologyReport :dataSourcesUsedForThisDataSet :referenceToSupportedImpactAssessmentMethods :compliance :lciaResults :dataQualityCriteriaAndRating :date :referenceYear ) .
 
 :productionLocationId a samm:Property ;
    samm:preferredName "meta_production_location_id"@en ;
@@ -124,6 +124,17 @@
    samm:preferredName "meta_data_quality_criteria_and_rating"@en ;
    samm:characteristic :MetaStringCharacteristic .
 
+:date a samm:Property ;
+   samm:preferredName " meta_date"@en ;
+   samm:characteristic :TimeStampCharacteristic .
+
+:referenceYear a samm:Property ;
+   samm:preferredName "meta_reference_year"@en ;
+   samm:characteristic :TimeStampCharacteristic .
+
 :MetaStringCharacteristic a samm:Characteristic ;
    samm:dataType xsd:string .
+
+:TimeStampCharacteristic a samm:Characteristic ;
+   samm:dataType xsd:dateTimeStamp .
 
