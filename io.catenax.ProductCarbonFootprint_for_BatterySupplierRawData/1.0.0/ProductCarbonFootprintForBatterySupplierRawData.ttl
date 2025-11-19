@@ -11,18 +11,27 @@
 @prefix samm-u: <urn:samm:org.eclipse.esmf.samm:unit:2.1.0#> .
 
 :ProductCarbonFootprintForBatterySupplierRawData a samm:Aspect ;
-   samm:properties ( :metaData ) ;
+   samm:properties ( :metaData :data ) ;
    samm:operations ( ) ;
    samm:events ( ) .
 
 :metaData a samm:Property ;
    samm:characteristic :MetaDataCharacteristic .
 
+:data a samm:Property ;
+   samm:characteristic :DataCharacteristic .
+
 :MetaDataCharacteristic a samm:Characteristic ;
    samm:dataType :MetaDataEntity .
 
+:DataCharacteristic a samm:Characteristic ;
+   samm:dataType :DataEntity .
+
 :MetaDataEntity a samm:Entity ;
    samm:properties ( :productionLocationId :bmwGroupSupplierNumber :companyName :responsibleBmwGroupBuyer :PartName :PartNumber :ProcessName :description :dataSetLcaReportBackgroundInfo :typeOfProcess :geographicalRepresentativenessGer :defaultParameterValues :regionalizedElementaryFlows :partNumber :duplicatedElementaryFlows :allocation :elementContent :cffParameters :modellingConstants :lcaMethodologyReport :dataSourcesUsedForThisDataSet :referenceToSupportedImpactAssessmentMethods :compliance :lciaResults :dataQualityCriteriaAndRating :date :referenceYear ) .
+
+:DataEntity a samm:Entity ;
+   samm:properties ( ) .
 
 :productionLocationId a samm:Property ;
    samm:preferredName "meta_production_location_id"@en ;
