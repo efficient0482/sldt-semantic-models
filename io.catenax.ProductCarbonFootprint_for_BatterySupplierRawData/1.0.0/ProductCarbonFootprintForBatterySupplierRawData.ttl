@@ -9,6 +9,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix : <urn:samm:io.catenax.ProductCarbonFootprint_for_BatterySupplierRawData:1.0.0#> .
 @prefix samm-u: <urn:samm:org.eclipse.esmf.samm:unit:2.1.0#> .
+@prefix ext-uuid: <urn:samm:io.catenax.shared.uuid:2.0.0#>.
 
 :ProductCarbonFootprintForBatterySupplierRawData a samm:Aspect ;
    samm:properties ( :metaData :data ) ;
@@ -31,7 +32,7 @@
    samm:properties ( :productionLocationId :bmwGroupSupplierNumber :companyName :responsibleBmwGroupBuyer :PartName :PartNumber :ProcessName :description :dataSetLcaReportBackgroundInfo :typeOfProcess :geographicalRepresentativenessGer :defaultParameterValues :regionalizedElementaryFlows :partNumber :duplicatedElementaryFlows :allocation :elementContent :cffParameters :modellingConstants :lcaMethodologyReport :dataSourcesUsedForThisDataSet :referenceToSupportedImpactAssessmentMethods :compliance :lciaResults :dataQualityCriteriaAndRating :date :referenceYear ) .
 
 :DataEntity a samm:Entity ;
-   samm:properties ( :process_name :system_components :type_of_flow :level1 :level2 :level3 :level4 :level5 :level6 :primaryInputOutputSourceEcoinventOnly :primaryInputOutput :primaryInputOutputDetailed :primaryInputOutputRegion :primaryUnit :secondaryInputOutputSource :secondaryInputOutput :secondaryInputOutputDetailed :secondaryInputOutputRegion :secondaryUnit :checkUnit :lifeCycleStage :datasetNameVirginPrimaryMaterial :datasetNameRecycledSecondaryMaterial :mostRelevantProcess :oneLevelDownAdjustedToCountry :carbonFootprintContribution :dataSource :collectionMethod :timespan :documentationForVerification :productionLocationId ) .
+   samm:properties ( :processName :systemComponents :typeOfFlow :level1 :level2 :level3 :level4 :level5 :level6 :primaryInputOutputSourceEcoinventOnly :primaryInputOutput :primaryInputOutputDetailed :primaryInputOutputRegion :primaryUnit :secondaryInputOutputSource :secondaryInputOutput :secondaryInputOutputDetailed :secondaryInputOutputRegion :secondaryUnit :checkUnit :lifeCycleStage :datasetNameVirginPrimaryMaterial :datasetNameRecycledSecondaryMaterial :mostRelevantProcess :oneLevelDownAdjustedToCountry :carbonFootprintContribution :dataSource :collectionMethod :timespan :documentationForVerification :productionLocationId :dataCollectionDate :uuidVirginPrimaryMaterial :uuidRecycledSecondaryMaterial ) .
 
 :productionLocationId a samm:Property ;
    samm:preferredName "meta_production_location_id"@en ;
@@ -141,15 +142,15 @@
    samm:preferredName "meta_reference_year"@en ;
    samm:characteristic :TimeStampCharacteristic .
 
-:process_name a samm:Property ;
+:processName a samm:Property ;
    samm:preferredName "process_name"@en ;
    samm:characteristic :MetaStringCharacteristic .
 
-:system_components a samm:Property ;
+:systemComponents a samm:Property ;
    samm:preferredName "system_components"@en ;
    samm:characteristic :MetaStringCharacteristic .
 
-:type_of_flow a samm:Property ;
+:typeOfFlow a samm:Property ;
    samm:preferredName "type_of_flow"@en ;
    samm:characteristic :MetaStringCharacteristic .
 
@@ -261,7 +262,20 @@
    samm:preferredName "documentation_for_verification"@en ;
    samm:characteristic :MetaStringCharacteristic .
 
-:MetaStringCharacteristic a samm:Characteristic ;
+:dataCollectionDate a samm:Property ;
+   samm:preferredName "data_collection_date"@en ;
+   samm:characteristic :TimeStampCharacteristic .
+
+:uuidVirginPrimaryMaterial a samm:Property ;
+   samm:preferredName "uuid_virgin_primary_material"@en ;
+   samm:characteristic ext-uuid:UuidV4Trait .
+
+   :uuidRecycledSecondaryMaterial a samm:Property ;
+   samm:preferredName "uuid_recycled_secondary_material"@en ;
+   samm:characteristic ext-uuid:UuidV4Trait .
+
+
+   :MetaStringCharacteristic a samm:Characteristic ;
    samm:dataType xsd:string .
 
 :TimeStampCharacteristic a samm:Characteristic ;
