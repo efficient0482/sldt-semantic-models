@@ -232,7 +232,7 @@
 
 :mostRelevantProcess a samm:Property ;
    samm:preferredName "most_relevant_process"@en ;
-   samm:characteristic :MetaStringCharacteristic .
+   samm:characteristic :MostRelevantProcessCharacteristic .
 
 :oneLevelDownAdjustedToCountry a samm:Property ;
    samm:preferredName "one_level_down_adjusted_to_country"@en ;
@@ -284,7 +284,7 @@
 
 :cffPart a samm:Property ;
    samm:preferredName "cff_part"@en ;
-   samm:characteristic :FloatCharacteristic .
+   samm:characteristic :CffPartCharacteristic .
 
 :materialDefaultValuesForCffParameters a samm:Property ;
    samm:preferredName "material_default_values_for_cff_parameters"@en ;
@@ -384,8 +384,16 @@
    samm:dataType xsd:string ;
    samm-c:values ( "(a) Raw material acquisition and pre-processing" "(b) Main product production" "(c) Distribution" "(d) End of life and recycling" ) .
 
+:MostRelevantProcessCharacteristic a samm-c:Enumeration ;
+   samm:dataType xsd:boolean ;
+   samm-c:values ( true false ) .
+
 :FloatCharacteristic a samm:Characteristic ;
    samm:dataType xsd:float .
+
+:CffPartCharacteristic a samm-c:Enumeration ;
+   samm:dataType xsd:string ;
+   samm-c:values ( "Material" "Energy" "PWB" "Batterycell" "Energy recovery" "Disposal" "Disposal PWB" ) .
 
 :DqrCharactistics a samm:Characteristic ;
    samm:dataType xsd:integer .
