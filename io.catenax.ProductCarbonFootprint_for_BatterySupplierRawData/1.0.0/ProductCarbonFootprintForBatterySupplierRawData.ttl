@@ -144,7 +144,7 @@
 
 :systemComponents a samm:Property ;
    samm:preferredName "system_components"@en ;
-   samm:characteristic :MetaStringCharacteristic .
+   samm:characteristic :SystemComponentsCharacteristic .
 
 :typeOfFlow a samm:Property ;
    samm:preferredName "type_of_flow"@en ;
@@ -180,7 +180,7 @@
 
 :primaryInputOutput a samm:Property ;
    samm:preferredName "primary_input_output"@en ;
-   samm:characteristic :MetaStringCharacteristic .
+   samm:characteristic :PrimaryInputOutputCharacteristic .
 
 :primaryInputOutputDetailed a samm:Property ;
    samm:preferredName "primary_input_output_detailed"@en ;
@@ -379,6 +379,14 @@
 :ProcessNameCharacteristic a samm-c:Enumeration ;
    samm:dataType xsd:string ;
    samm-c:values ( "(a) cathode active material production" "(b) anode active material production, including the production of graphite and hard carbon from its precursors" "(c) anode and cathode production, including the mixing of ink components, coating of ink on collectors, drying, calendaring, and slitting" "(d) electrolyte production, including the electrolyte salt mixing" "(e) assembling the housing and the thermal conditioning system" "(f) Assembling the cell components into a battery cell, including stacking/winding of electrodes and separator, assembling into a cell housing or pouch, injection of electrolyte, closing of cell, testing and electrical formation" "(g) Assembling the cells into modules/pack including electric/electronic components, housing, and other relevant components" "(h) Assembling the modules with electric/electronic components, housing, and other relevant components into a finished battery" "(i) transport operations of the final and intermediate products to the site where they are used" ) .
+
+:SystemComponentsCharacteristic a samm-c:Enumeration ;
+   samm:dataType xsd:string ;
+   samm-c:values ( "(a) battery cell anode" "(b) battery cell cathode" "(c) battery cell electrolyte" "(d) battery cell housing" "(e) the battery cell components other than the ones listed in points (a) to (d) combined" "(f) battery module housing" "(g) battery module electronics" "(h) battery pack system housing" "(i) battery packs electronics" ) .
+
+:PrimaryInputOutputCharacteristic a samm-c:Enumeration ;
+   samm:dataType xsd:string ;
+   samm-c:values ( "Ecoinvent" "EF3.1" ) .
 
 :LifeCycleStageCharacteristic a samm-c:Enumeration ;
    samm:dataType xsd:string ;
