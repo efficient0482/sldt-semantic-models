@@ -140,7 +140,7 @@
 
 :processName a samm:Property ;
    samm:preferredName "process_name"@en ;
-   samm:characteristic :MetaStringCharacteristic .
+   samm:characteristic :ProcessNameCharacteristic .
 
 :systemComponents a samm:Property ;
    samm:preferredName "system_components"@en ;
@@ -220,7 +220,7 @@
 
 :lifeCycleStage a samm:Property ;
    samm:preferredName "life_cycle_stage"@en ;
-   samm:characteristic :MetaStringCharacteristic .
+   samm:characteristic :LifeCycleStageCharacteristic .
 
 :datasetNameVirginPrimaryMaterial a samm:Property ;
    samm:preferredName "dataset_name_virgin_primary_material"@en ;
@@ -375,6 +375,14 @@
 
 :TimeStampCharacteristic a samm:Characteristic ;
    samm:dataType xsd:dateTimeStamp .
+
+:ProcessNameCharacteristic a samm-c:Enumeration ;
+   samm:dataType xsd:string ;
+   samm-c:values ( "(a) cathode active material production" "(b) anode active material production, including the production of graphite and hard carbon from its precursors" "(c) anode and cathode production, including the mixing of ink components, coating of ink on collectors, drying, calendaring, and slitting" "(d) electrolyte production, including the electrolyte salt mixing" "(e) assembling the housing and the thermal conditioning system" "(f) Assembling the cell components into a battery cell, including stacking/winding of electrodes and separator, assembling into a cell housing or pouch, injection of electrolyte, closing of cell, testing and electrical formation" "(g) Assembling the cells into modules/pack including electric/electronic components, housing, and other relevant components" "(h) Assembling the modules with electric/electronic components, housing, and other relevant components into a finished battery" "(i) transport operations of the final and intermediate products to the site where they are used" ) .
+
+:LifeCycleStageCharacteristic a samm-c:Enumeration ;
+   samm:dataType xsd:string ;
+   samm-c:values ( "(a) Raw material acquisition and pre-processing" "(b) Main product production" "(c) Distribution" "(d) End of life and recycling" ) .
 
 :FloatCharacteristic a samm:Characteristic ;
    samm:dataType xsd:float .
