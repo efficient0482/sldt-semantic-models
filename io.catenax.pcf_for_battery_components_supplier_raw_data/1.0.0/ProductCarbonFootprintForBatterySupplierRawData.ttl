@@ -17,15 +17,20 @@
    samm:events ( ) .
 
 :metaData a samm:Property ;
+   samm:preferredName "meta_data"@en ;
+   samm:description "Corresponds to the sheet \"Worksheet Metadata\""@en ;
    samm:characteristic :MetaDataCharacteristic .
 
 :data a samm:Property ;
+   samm:preferredName "data"@en ;
    samm:characteristic :DataCharacteristic .
 
 :MetaDataCharacteristic a samm:Characteristic ;
    samm:dataType :MetaDataEntity .
 
 :DataCharacteristic a samm-c:List ;
+   samm:preferredName "data_characteristic"@en ;
+   samm:description "Corresponds to the sheet \"Worksheet Input-Output xxxxx\". Each entry is a row in the excel sheet"@en ;
    samm:dataType :DataEntity .
 
 :MetaDataEntity a samm:Entity ;
