@@ -25,7 +25,7 @@
 :MetaDataCharacteristic a samm:Characteristic ;
    samm:dataType :MetaDataEntity .
 
-:DataCharacteristic a samm:Characteristic ;
+:DataCharacteristic a samm-c:List ;
    samm:dataType :DataEntity .
 
 :MetaDataEntity a samm:Entity ;
